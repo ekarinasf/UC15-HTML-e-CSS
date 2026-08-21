@@ -1,0 +1,79 @@
+/* Reset básico */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo base do body */
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+/* Tema frio */
+body.frio {
+  background: linear-gradient(135deg, #e6f0ff, #bcdcff);
+  color: #08336b;
+}
+
+/* Tema agradável */
+body.agradavel {
+  background: linear-gradient(135deg, #f7fbf6, #d6f5e1);
+  color: #114b2b;
+}
+
+/* Tema quente */
+body.quente {
+  background: linear-gradient(135deg, #fff4d6, #ffd399);
+  color: #7a4f00;
+}
+
+/* Tema muito quente */
+body.muito-quente {
+  background: linear-gradient(135deg, #fff1e6, #ffb199);
+  color: #6a1b00;
+}
+
+/* Caixa central com o conteúdo */
+.conteudo {
+  text-align: center;
+}
+
+/* Emoji grande */
+#emoji {
+  font-size: 80px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Título da saudação */
+#saudacao {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Horário atual */
+#horario {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* Botão de atualizar */
+#atualizar {
+  margin-top: 18px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.2);
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.12s ease, opacity 0.12s ease;
+}
+
+#atualizar:active { transform: translateY(1px); }
