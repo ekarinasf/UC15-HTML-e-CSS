@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal da Tabela Periódica Acessível</title>
+    <link rel="stylesheet" href="tabela.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header role="banner">
+        <div class="header-content">
+            <h1>Tabela Periódica Acessível</h1>
+            <p class="subtitle">Plataforma otimizada para Baixa Visão, Cegueira e Daltonismo</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- CONTROLES DE ACESSIBILIDADE -->
+        <section class="accessibility-bar" aria-label="Opções de Acessibilidade">
+            <button id="btn-theme-default" class="btn">Tema Laranja & Azul (Padrão)</button>
+            <button id="btn-theme-dark" class="btn">Alto Contraste (Preto/Amarelo)</button>
+            <button id="btn-theme-mono" class="btn">Monocromático</button>
+            <button id="btn-toggle-speech" class="btn btn-action">Voz: <span id="speech-status">ATIVADA</span></button>
+        </section>
+
+        <!-- SEÇÃO INFORMATIVA -->
+        <section class="info-card">
+            <h2>O que é a Tabela Periódica?</h2>
+            <p>
+                A <strong>Tabela Periódica</strong> organiza todos os elementos químicos conhecidos em ordem crescente de <strong>número atômico</strong> (quantidade de prótons). Ela permite prever propriedades físicas e reações químicas do universo.
+            </p>
+        </section>
+
+        <!-- ÁREA DA TABELA PERIÓDICA -->
+        <main>
+            <section class="table-wrapper" aria-label="Tabela Periódica Interativa">
+                <div class="table-header">
+                    <h2>Tabela Periódica dos Elementos</h2>
+                    <p>Passe o cursor ou navegue com a tecla <strong>TAB</strong> para dar zoom e ouvir os detalhes.</p>
+                </div>
+
+                <!-- GRID DA TABELA -->
+                <div class="periodic-table" role="region" aria-label="Grid da Tabela Periódica">
+                    
+                    <!-- Linha 1 -->
+                    <div class="element-card cat-nao-metal" tabindex="0" role="button" data-number="1" data-symbol="H" data-name="Hidrogênio" data-mass="1.008" data-category="Não Metal" data-curiosity="É o elemento mais abundante do universo." aria-label="Hidrogênio, Símbolo H, Número 1.">
+                        <span class="number">1</span><span class="symbol">H</span><span class="name">Hidrogênio</span>
+                    </div>
+                    <div class="empty-cell" style="grid-column: span 16;"></div>
+                    <div class="element-card cat-gas-nobre" tabindex="0" role="button" data-number="2" data-symbol="He" data-name="Hélio" data-mass="4.0026" data-category="Gás Nobre" data-curiosity="Foi encontrado no Sol antes de ser descoberto na Terra." aria-label="Hélio, Símbolo He, Número 2.">
+                        <span class="number">2</span><span class="symbol">He</span><span class="name">Hélio</span>
+                    </div>
+
+                    <!-- Linha 2 -->
+                    <div class="element-card cat-alcalino" tabindex="0" role="button" data-number="3" data-symbol="Li" data-name="Lítio" data-mass="6.94" data-category="Metal Alcalino" data-curiosity="Metal mais leve que existe, capaz de flutuar na água." aria-label="Lítio, Símbolo Li, Número 3.">
+                        <span class="number">3</span><span class="symbol">Li</span><span class="name">Lítio</span>
+                    </div>
+                    <div class="element-card cat-alcalino-terroso" tabindex="0" role="button" data-number="4" data-symbol="Be" data-name="Berílio" data-mass="9.0122" data-category="Alcalino-Terroso" data-curiosity="Dá a cor verde às esmeraldas." aria-label="Berílio, Símbolo Be, Número 4.">
+                        <span class="number">4</span><span class="symbol">Be</span><span class="name">Berílio</span>
+                    </div>
+                    <div class="empty-cell" style="grid-column: span 10;"></div>
+                    <div class="element-card cat-semimetal" tabindex="0" role="button" data-number="5" data-symbol="B" data-name="Boro" data-mass="10.81" data-category="Semimetal" data-curiosity="Usado em vidros resistentes ao calor." aria-label="Boro, Símbolo B, Número 5.">
+                        <span class="number">5</span><span class="symbol">B</span><span class="name">Boro</span>
+                    </div>
+                    <div class="element-card cat-nao-metal" tabindex="0" role="button" data-number="6" data-symbol="C" data-name="Carbono" data-mass="12.011" data-category="Não Metal" data-curiosity="Base estrutural de toda a vida conhecida." aria-label="Carbono, Símbolo C, Número 6.">
+                        <span class="number">6</span><span class="symbol">C</span><span class="name">Carbono</span>
+                    </div>
+                    <div class="element-card cat-nao-metal" tabindex="0" role="button" data-number="7" data-symbol="N" data-name="Nitrogênio" data-mass="14.007" data-category="Não Metal" data-curiosity="Compõe cerca de 78% do ar atmosférico." aria-label="Nitrogênio, Símbolo N, Número 7.">
+                        <span class="number">7</span><span class="symbol">N</span><span class="name">Nitrogênio</span>
+                    </div>
+                    <div class="element-card cat-nao-metal" tabindex="0" role="button" data-number="8" data-symbol="O" data-name="Oxigênio" data-mass="15.999" data-category="Não Metal" data-curiosity="Essencial para a respiração da maioria dos seres vivos." aria-label="Oxigênio, Símbolo O, Número 8.">
+                        <span class="number">8</span><span class="symbol">O</span><span class="name">Oxigênio</span>
+                    </div>
+                    <div class="element-card cat-halogenio" tabindex="0" role="button" data-number="9" data-symbol="F" data-name="Flúor" data-mass="18.998" data-category="Halogênio" data-curiosity="Elemento quimicamente mais reativo de todos." aria-label="Flúor, Símbolo F, Número 9.">
+                        <span class="number">9</span><span class="symbol">F</span><span class="name">Flúor</span>
+                    </div>
+                    <div class="element-card cat-gas-nobre" tabindex="0" role="button" data-number="10" data-symbol="Ne" data-name="Neônio" data-mass="20.180" data-category="Gás Nobre" data-curiosity="Emite um brilho avermelhado em letreiros luminosos." aria-label="Neônio, Símbolo Ne, Número 10.">
+                        <span class="number">10</span><span class="symbol">Ne</span><span class="name">Neônio</span>
+                    </div>
+
+                    <!-- Linha 3 -->
+                    <div class="element-card cat-alcalino" tabindex="0" role="button" data-number="11" data-symbol="Na" data-name="Sódio" data-mass="22.990" data-category="Metal Alcalino" data-curiosity="Reage violentamente em contato com a água." aria-label="Sódio, Símbolo Na, Número 11.">
+                        <span class="number">11</span><span class="symbol">Na</span><span class="name">Sódio</span>
+                    </div>
+                    <div class="element-card cat-alcalino-terroso" tabindex="0" role="button" data-number="12" data-symbol="Mg" data-name="Magnésio" data-mass="24.305" data-category="Alcalino-Terroso" data-curiosity="Queima com uma luz branca extremamente brilhante." aria-label="Magnésio, Símbolo Mg, Número 12.">
+                        <span class="number">12</span><span class="symbol">Mg</span><span class="name">Magnésio</span>
+                    </div>
+                    <div class="empty-cell" style="grid-column: span 10;"></div>
+                    <div class="element-card cat-outros-metais" tabindex="0" role="button" data-number="13" data-symbol="Al" data-name="Alumínio" data-mass="26.982" data-category="Outro Metal" data-curiosity="Metal mais abundante da crosta terrestre." aria-label="Alumínio, Símbolo Al, Número 13.">
+                        <span class="number">13</span><span class="symbol">Al</span><span class="name">Alumínio</span>
+                    </div>
+                    <div class="element-card cat-semimetal" tabindex="0" role="button" data-number="14" data-symbol="Si" data-name="Silício" data-mass="28.085" data-category="Semimetal" data-curiosity="Base fundamental de chips e eletrônicos." aria-label="Silício, Símbolo Si, Número 14.">
+                        <span class="number">14</span><span class="symbol">Si</span><span class="name">Silício</span>
+                    </div>
+                    <div class="element-card cat-nao-metal" tabindex="0" role="button" data-number="15" data-symbol="P" data-name="Fósforo" data-mass="30.974" data-category="Não Metal" data-curiosity="Glow-in-the-dark: foi descoberto na urina humana." aria-label="Fósforo, Símbolo P, Número 15.">
+                        <span class="number">15</span><span class="symbol">P</span><span class="name">Fósforo</span>
+                    </div>
+                    <div class="element-card cat-nao-metal" tabindex="0" role="button" data-number="16" data-symbol="S" data-name="Enxofre" data-mass="32.06" data-category="Não Metal" data-curiosity="Conhecido desde a antiguidade pelo cheiro característico." aria-label="Enxofre, Símbolo S, Número 16.">
+                        <span class="number">16</span><span class="symbol">S</span><span class="name">Enxofre</span>
+                    </div>
+                    <div class="element-card cat-halogenio" tabindex="0" role="button" data-number="17" data-symbol="Cl" data-name="Cloro" data-mass="35.45" data-category="Halogênio" data-curiosity="Usado para purificar água potável e piscinas." aria-label="Cloro, Símbolo Cl, Número 17.">
+                        <span class="number">17</span><span class="symbol">Cl</span><span class="name">Cloro</span>
+                    </div>
+                    <div class="element-card cat-gas-nobre" tabindex="0" role="button" data-number="18" data-symbol="Ar" data-name="Argônio" data-mass="39.948" data-category="Gás Nobre" data-curiosity="Terceiro gás mais abundante na atmosfera terrestre." aria-label="Argônio, Símbolo Ar, Número 18.">
+                        <span class="number">18</span><span class="symbol">Ar</span><span class="name">Argônio</span>
+                    </div>
+
+                    <!-- Linha 4 (Com Metais de Transição) -->
+                    <div class="element-card cat-alcalino" tabindex="0" role="button" data-number="19" data-symbol="K" data-name="Potássio" data-mass="39.098" data-category="Metal Alcalino" data-curiosity="Essencial para o funcionamento dos músculos e nervos." aria-label="Potássio, Símbolo K, Número 19.">
+                        <span class="number">19</span><span class="symbol">K</span><span class="name">Potássio</span>
+                    </div>
+                    <div class="element-card cat-alcalino-terroso" tabindex="0" role="button" data-number="20" data-symbol="Ca" data-name="Cálcio" data-mass="40.078" data-category="Alcalino-Terroso" data-curiosity="Principal componente mineral dos ossos e dentes." aria-label="Cálcio, Símbolo Ca, Número 20.">
+                        <span class="number">20</span><span class="symbol">Ca</span><span class="name">Cálcio</span>
+                    </div>
+                    <div class="element-card cat-transicao" tabindex="0" role="button" data-number="21" data-symbol="Sc" data-name="Escândio" data-mass="44.956" data-category="Transição" data-curiosity="Usado em ligas de alumínio para quadros de bicicletas de alta performance." aria-label="Escândio, Símbolo Sc, Número 21.">
+                        <span class="number">21</span><span class="symbol">Sc</span><span class="name">Escândio</span>
+                    </div>
+                    <div class="element-card cat-transicao" tabindex="0" role="button" data-number="22" data-symbol="Ti" data-name="Titânio" data-mass="47.867" data-category="Transição" data-curiosity="Tão forte quanto o aço, mas 45% mais leve." aria-label="Titânio, Símbolo Ti, Número 22.">
+                        <span class="number">22</span><span class="symbol">Ti</span><span class="name">Titânio</span>
+                    </div>
+                    <div class="element-card cat-transicao" tabindex="0" role="button" data-number="26" data-symbol="Fe" data-name="Ferro" data-mass="55.845" data-category="Transição" data-curiosity="Elemento mais abundante na massa total da Terra." aria-label="Ferro, Símbolo Fe, Número 26.">
+                        <span class="number">26</span><span class="symbol">Fe</span><span class="name">Ferro</span>
+                    </div>
+                    <div class="element-card cat-transicao" tabindex="0" role="button" data-number="29" data-symbol="Cu" data-name="Cobre" data-mass="63.546" data-category="Transição" data-curiosity="Primeiro metal a ser trabalhado pelo ser humano." aria-label="Cobre, Símbolo Cu, Número 29.">
+                        <span class="number">29</span><span class="symbol">Cu</span><span class="name">Cobre</span>
+                    </div>
+                    <div class="element-card cat-transicao" tabindex="0" role="button" data-number="30" data-symbol="Zn" data-name="Zinco" data-mass="65.38" data-category="Transição" data-curiosity="Usado para galvanizar e proteger o aço contra a ferrugem." aria-label="Zinco, Símbolo Zn, Número 30.">
+                        <span class="number">30</span><span class="symbol">Zn</span><span class="name">Zinco</span>
+                    </div>
+                    <div class="element-card cat-transicao" tabindex="0" role="button" data-number="47" data-symbol="Ag" data-name="Prata" data-mass="107.87" data-category="Transição" data-curiosity="Possui a maior condutividade elétrica entre todos os metais." aria-label="Prata, Símbolo Ag, Número 47.">
+                        <span class="number">47</span><span class="symbol">Ag</span><span class="name">Prata</span>
+                    </div>
+                    <div class="element-card cat-transicao" tabindex="0" role="button" data-number="79" data-symbol="Au" data-name="Ouro" data-mass="196.97" data-category="Transição" data-curiosity="Tão maleável que 1g pode ser esticado em uma folha de 1m²." aria-label="Ouro, Símbolo Au, Número 79.">
+                        <span class="number">79</span><span class="symbol">Au</span><span class="name">Ouro</span>
+                    </div>
+                    <div class="element-card cat-transicao" tabindex="0" role="button" data-number="80" data-symbol="Hg" data-name="Mercúrio" data-mass="200.59" data-category="Transição" data-curiosity="Único metal que permanece líquido em temperatura ambiente." aria-label="Mercúrio, Símbolo Hg, Número 80.">
+                        <span class="number">80</span><span class="symbol">Hg</span><span class="name">Mercúrio</span>
+                    </div>
+                    <div class="element-card cat-gas-nobre" tabindex="0" role="button" data-number="36" data-symbol="Kr" data-name="Criptônio" data-mass="83.798" data-category="Gás Nobre" data-curiosity="Usado em flashes fotográficos de altíssima velocidade." aria-label="Criptônio, Símbolo Kr, Número 36.">
+                        <span class="number">36</span><span class="symbol">Kr</span><span class="name">Criptônio</span>
+                    </div>
+                    <div class="element-card cat-gas-nobre" tabindex="0" role="button" data-number="54" data-symbol="Xe" data-name="Xenônio" data-mass="131.29" data-category="Gás Nobre" data-curiosity="Primeiro gás nobre a formar compostos químicos reais." aria-label="Xenônio, Símbolo Xe, Número 54.">
+                        <span class="number">54</span><span class="symbol">Xe</span><span class="name">Xenônio</span>
+                    </div>
+                    <div class="element-card cat-gas-nobre" tabindex="0" role="button" data-number="86" data-symbol="Rn" data-name="Radônio" data-mass="222" data-category="Gás Nobre" data-curiosity="Gás radioativo natural que emana do solo." aria-label="Radônio, Símbolo Rn, Número 86.">
+                        <span class="number">86</span><span class="symbol">Rn</span><span class="name">Radônio</span>
+                    </div>
+                    <div class="element-card cat-transicao" tabindex="0" role="button" data-number="92" data-symbol="U" data-name="Urânio" data-mass="238.03" data-category="Actinídeo" data-curiosity="Combustível primário utilizado em usinas de energia nuclear." aria-label="Urânio, Símbolo U, Número 92.">
+                        <span class="number">92</span><span class="symbol">U</span><span class="name">Urânio</span>
+                    </div>
+                    <div class="element-card cat-transicao" tabindex="0" role="button" data-number="118" data-symbol="Og" data-name="Oganessônio" data-mass="294" data-category="Gás Nobre" data-curiosity="Elemento mais pesado já sintetizado na história da ciência." aria-label="Oganessônio, Símbolo Og, Número 118.">
+                        <span class="number">118</span><span class="symbol">Og</span><span class="name">Oganessônio</span>
+                    </div>
+                </div>
+
+                <!-- PAINEL FIXO DE DETALHES -->
+                <div id="details-panel" aria-live="polite" aria-atomic="true">
+                    <p id="element-description">Interaja com os elementos acima para expandir as informações e ler os detalhes.</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- SEÇÃO DE CURIOSIDADES -->
+        <section class="info-card">
+            <h2>Fatos e Curiosidades Químicas</h2>
+            <ul class="curiosities-list">
+                <li><strong>O criador:</strong> Dmitri Mendeleev previu elementos desconhecidos em 1869 deixando espaços vazios na tabela.</li>
+                <li><strong>O elemento mais leve:</strong> O Hidrogênio representa 75% da massa de todo o Universo observável.</li>
+                <li><strong>Metais Líquidos:</strong> Apenas dois elementos são líquidos em temperatura ambiente: Mercúrio (metal) e Bromo (não-metal).</li>
+                <li><strong>Sem a letra J:</strong> A letra <strong>J</strong> é a única que não consta em nenhum símbolo químico da tabela.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer role="contentinfo">
+        <p>Desenvolvido sob diretrizes WCAG 2.1 AAA para acessibilidade total | Compatível com NVDA, JAWS e leitores móveis.</p>
+    </footer>
+
+    <script src="tabela.js"></script>
+</body>
+</html>
